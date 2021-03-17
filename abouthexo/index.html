@@ -514,91 +514,61 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p><strong>3.检查是否安装成功</strong></p>
 <ul>
-<li><pre><code>#在cmd中输入
-git --version
-node -v
-npm -v
-</code></pre>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#在cmd中输入</span><br><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
 <p>显示对应版本号即为成功</p>
 </li>
 </ul>
-<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><pre><code> #全局安装
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> #全局安装</span><br><span class="line"></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"> #查看hexo版本 </span><br><span class="line"></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-npm install hexo-cli -g
 
- #查看hexo版本 
 
-hexo -v
-</code></pre>
 <h2 id="创建本地博客"><a href="#创建本地博客" class="headerlink" title="创建本地博客"></a>创建本地博客</h2><h3 id="本地文件建立"><a href="#本地文件建立" class="headerlink" title="本地文件建立"></a>本地文件建立</h3><p>在任意位置新建一个文件夹，作位安装博客本地文件的位置，我这里选择在d盘安装，如    D/hexo</p>
-<pre><code>#表示安装 hexo
-npm install hexo-cli -g
-#查看hexo版本
-hexo -v
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#表示安装 hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">#查看hexo版本</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
 <h3 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h3><p>在新建的文件夹内右键，git bush here,输入</p>
-<pre><code>npm install
-npm install
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
 <p>输入前确保此文件夹内啥都没有，不然安装失败</p>
 <p>安装完成后文件夹内有如下文件</p>
-<pre><code>.
-├── .deploy       # 需要部署的文件
-├── node_modules  # 项目所有的依赖包和插件
-├── public        # 生成的静态网页文件
-├── scaffolds     # 文章模板
-├── source        # 博客正文和其他源文件等都应该放在这里
-|   ├── _drafts   # 草稿
-|   └── _posts    # 文章
-├── themes        # 主题
-├── _config.yml   # 全局配置文件
-└── package.json  # 项目依赖信息
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy       # 需要部署的文件</span><br><span class="line">├── node_modules  # 项目所有的依赖包和插件</span><br><span class="line">├── public        # 生成的静态网页文件</span><br><span class="line">├── scaffolds     # 文章模板</span><br><span class="line">├── source        # 博客正文和其他源文件等都应该放在这里</span><br><span class="line">|   ├── _drafts   # 草稿</span><br><span class="line">|   └── _posts    # 文章</span><br><span class="line">├── themes        # 主题</span><br><span class="line">├── _config.yml   # 全局配置文件</span><br><span class="line">└── package.json  # 项目依赖信息</span><br></pre></td></tr></table></figure>
+
 <h3 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h3><p>执行以下命令，执行完即可登录 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果</p>
-<pre><code>$ hexo generate
-$ hexo server
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>显示以下信息说明操作成功：</p>
-<pre><code>INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://img-blog.csdnimg.cn/20200802200937295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20200802200937295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="在这里插入图片描述"></p>
 <p>默认显示的第一篇文章就是教怎么新建文章的</p>
 <h2 id="将博客部署到云端"><a href="#将博客部署到云端" class="headerlink" title="将博客部署到云端"></a>将博客部署到云端</h2><h3 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github&amp;gitee 代码库同步</p>
 <p>在你的博客文件夹右键git bush here</p>
-<pre><code>$ ssh-keygen -t rsa -C
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C</span><br></pre></td></tr></table></figure>
+
 <p>之后会出现：</p>
-<pre><code>Generating public/private rsa key pair.
-Enter file in which to save the key (/c/Users/you/.ssh/id_rsa):
-//到这里可以直接回车将密钥按默认文件进行存储
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br><span class="line">&#x2F;&#x2F;到这里可以直接回车将密钥按默认文件进行存储</span><br></pre></td></tr></table></figure>
+
 <p>然后会出现：</p>
-<pre><code>Enter passphrase (empty for no passphrase):
-//这里是要你输入密码，其实不需要输什么密码，直接回车就行
-Enter same passphrase again:
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">&#x2F;&#x2F;这里是要你输入密码，其实不需要输什么密码，直接回车就行</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+
 <p>接下来屏幕会显示：</p>
-<pre><code>Your identification has been saved in /c/Users/you/.ssh/id_rsa.
-Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.
-</code></pre>
-<p>到这个出现的文件夹内找到rsa.pub，用记事本打开，复制，到gitee或者GitHub的个人设置里面，找到 SSH and GPG Keys，添加刚复制的密钥即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;到这个出现的文件夹内找到rsa.pub，用记事本打开，复制，到gitee或者GitHub的个人设置里面，找到 SSH and GPG Keys，添加刚复制的密钥即可</p>
 <p>测试是否添加成功</p>
-<pre><code>$ ssh -T git@github.com
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
 <p>之后会显示：<img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/15.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/15.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="15"></p>
 <p>输入 yes 后会显示<img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/16.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/16.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="16"></p>
 <p>此时你还需要配置：</p>
-<pre><code>$ git config --global user.name &quot;liuxianan&quot;// 你的github用户名，非昵称 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuxianan&quot;&#x2F;&#x2F; 你的github用户名，非昵称 </span><br><span class="line"></span><br><span class="line">$ git config --global user.email  &quot;xxx@qq.com&quot;&#x2F;&#x2F; 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
 
-$ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱
+<h3 id="将项目部署到码云"><a href="#将项目部署到码云" class="headerlink" title="将项目部署到码云"></a>将项目部署到码云</h3><pre><code>1、在码云新建一个仓库，注意标红的地方
 </code></pre>
-<h3 id="将项目部署到码云"><a href="#将项目部署到码云" class="headerlink" title="将项目部署到码云"></a>将项目部署到码云</h3><p>1、在码云新建一个仓库，注意标红的地方</p>
 <p><img src="https://img-blog.csdnimg.cn/20200802201146107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20200802201146107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="在这里插入图片描述"></p>
 <p>2、在项目根目录下安装git部署插件</p>
-<pre><code>*# 之后就可以使用 hexo deploy（或简写 hexo d）将项目部署到gitee远程仓库*
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 之后就可以使用 hexo deploy（或简写 hexo d）将项目部署到gitee远程仓库</span><br><span class="line"></span><br><span class="line"> npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
- npm install hexo-deployer-git --save
-</code></pre>
 <p><img src="https://img-blog.csdnimg.cn/20200802201219532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20200802201219532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="在这里插入图片描述"></p>
 <p>3、修改项目配置文件在根目录：**_config.yml**，在最下面，修改如下内容</p>
 <p><img src="https://img-blog.csdnimg.cn/2020080220131539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/2020080220131539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM2NTUzMA==,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="在这里插入图片描述"></p>
@@ -611,15 +581,10 @@ $ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注
 <p>2.打开自己的项目 yourname.github.io，鼠标移到 Clone or download 按钮，选择 Use SSH，复制地址</p>
 <p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/19.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A02/19.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="19"></p>
 <p>3.在 _config.yml文件中gitee地址下面再添加一个</p>
-<pre><code>deploy:
-  type: git
-  repo: 
-    github: xxxxx
-    gitee: xxxxx
-  branch: master
-</code></pre>
-<h3 id="三连部署"><a href="#三连部署" class="headerlink" title="三连部署"></a>三连部署</h3><pre><code>hexo cl &amp;&amp; hexo g -d
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: xxxxx</span><br><span class="line">    gitee: xxxxx</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="三连部署"><a href="#三连部署" class="headerlink" title="三连部署"></a>三连部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
+
 <p>访问自己的网站博客吧！</p>
 
   
@@ -655,7 +620,7 @@ $ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-17T17:09:28+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-17T17:38:23+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 17, 2021</p>
@@ -1015,8 +980,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
-  
 </script>
 <!-- required -->
 
@@ -1314,7 +1277,7 @@ var loadCSS = function( href, before, media, attributes ){
       if (href.length == 0) {
         // 选中文本
         if (window.getSelection().toString()) {
-          if ('' == 'true') {
+          if ('true' == 'true') {
             copyText.style.display = 'block';
             hrText.style.display = 'block';
           }
@@ -1436,6 +1399,62 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+	volantis.pjax.push(pjax_initCopyCode)
+</script>
 
 
 
@@ -1601,20 +1620,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 

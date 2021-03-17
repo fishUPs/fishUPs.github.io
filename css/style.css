@@ -2418,6 +2418,9 @@ article#comments #valine_container .vwrap .vedit span {
 article#comments #valine_container .vwrap .vedit span.actived {
   fill: #44d7b6;
 }
+article#comments #valine_container .vwrap .vedit .veditor {
+  background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich23.gif") 100% 100% no-repeat;
+}
 article#comments #valine_container .vcount {
   color: var(--color-p);
   font-size: 0.875rem;
@@ -3671,6 +3674,12 @@ footer.footer .copyright p {
 .l_main .post-wrapper {
   column-break-inside: avoid;
   break-inside: avoid-column;
+  box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  transition: box-shadow 0.5s ease;
+}
+.l_main .post-wrapper:hover {
+  box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.5);
 }
 .l_main .widget .content p,
 .l_main .widget .content ul,
@@ -3726,7 +3735,7 @@ footer.footer .copyright p {
   margin: 0;
   border-bottom: none;
   padding-bottom: 4px;
-  border-bottom: none;
+  text-align: center;
 }
 .l_main .post .article-meta {
   color: var(--color-meta);
@@ -4241,6 +4250,7 @@ img.lazyload:not(.placeholder).loaded {
 }
 .article-title {
   font-weight: 500;
+  text-align: center;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -4417,6 +4427,11 @@ img.lazyload:not(.placeholder).loaded {
   border-radius: 8px;
   width: 100%;
   display: none;
+  box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
+  transition: box-shadow 0.5s ease;
+}
+.widget:hover {
+  box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.5);
 }
 .widget ul li,
 .widget ol li {

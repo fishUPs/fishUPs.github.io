@@ -700,7 +700,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Mar 17 2021 16:08:11 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Wed Mar 17 2021 17:09:47 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2021-03-17 日</div>
           
         </div>
@@ -982,6 +982,8 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1567,6 +1569,20 @@ function setSearchService() {
 
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 

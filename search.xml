@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>abouthexo</title>
+      <title>使用volantis主题安装hexo博客</title>
       <link href="abouthexo/"/>
       <url>abouthexo/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p><strong>1、安装 Node.js 环境</strong>： 因为 Hexo 是基于Node.js 的博客框架，就像 Java 要依赖 JDK 环境一样。</p><pre><code>- node下载地址：http://nodejs.cn/download/ </code></pre><p><strong>2、安装版本控制工具 Git ：</strong> 用来将本地项目托管到码云，所以还需要自己注册一个码云的账号</p><ul><li>下载地址：<a href="https://git-scm.com/download">https://git-scm.com/download</a> </li></ul><p><strong>3.检查是否安装成功</strong></p><ul><li><pre><code>#在cmd中输入git --versionnode -vnpm -v<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  显示对应版本号即为成功</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">## hexo安装</span><br><span class="line"></span><br></pre></td></tr></table></figure># 全局安装npm install hexo-cli -g # 查看hexo版本 hexo -v<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 创建本地博客</span><br><span class="line"></span><br><span class="line">### 本地文件建立</span><br><span class="line"></span><br><span class="line">在任意位置新建一个文件夹，作位安装博客本地文件的位置，我这里选择在d盘安装，如D&#x2F;hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>#表示安装 hexo$ npm install hexo-cli -g#安装 hexo 部署到 git page 的 deployer$ npm install hexo-deployer-git --save</code></pre></li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
       
     </entry>
     

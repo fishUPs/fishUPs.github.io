@@ -104,7 +104,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>
     
 
 <header id="l_header" class="l_header auto shadow floatable " style='opacity: 0' >
@@ -380,7 +379,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">HandsonQ</p>
     
     
-      <p class="subtitle">「life is like a box of chocolates,you never know what you're gonna get」</p>
+      <p class="subtitle">「life is like a box of chocolates<br>you never know what you're gonna get」</p>
     
   </div>
   <div class='bottom'>
@@ -445,7 +444,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 						<h2>2021</h2>
 					
 						<div class='timenode'>
-								<a class="meta" href="/abouthexo/">
+								<a class="meta" href="/undefined/abouthexo/">
 									<time>03-16</time>
 									
 										使用volantis主题安装hexo博客
@@ -461,7 +460,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/markdown/">
+								<a class="meta" href="/undefined/markdown/">
 									<time>03-15</time>
 									
 										markdown
@@ -477,7 +476,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/luxiaojie/">
+								<a class="meta" href="/undefined/luxiaojie/">
 									<time>03-14</time>
 									
 										你好卢小姐
@@ -493,7 +492,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
-								<a class="meta" href="/hello-world/">
+								<a class="meta" href="/undefined/hello-world/">
 									<time>03-14</time>
 									
 										Hello World
@@ -666,7 +665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
       
         <div class="webinfo-item">
-          <div>已运行时间：</div>
+          <div>运行时间：</div>
           <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
         </div>
         <script>
@@ -683,7 +682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
       
         <div class="webinfo-item">
-          <div>本站访客数：</div>
+          <div>总访客数：</div>
           
           <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
           
@@ -692,7 +691,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
       
         <div class="webinfo-item">
-          <div>本站总访问量：</div>
+          <div>总访问量：</div>
           
           <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
           
@@ -703,8 +702,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Mar 17 2021 22:47:07 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-03-17 日</div>
+            <div id="last-update" style="display: none;">Thu Mar 18 2021 00:52:29 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-03-18 日</div>
           
         </div>
         
@@ -754,7 +753,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-03-17 日';
+            document.getElementById('last-update-show').innerHTML = '2021-03-18 日';
           }
         </script>
         
@@ -1522,14 +1521,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "来唠两句~";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+    valine.init(Object.assign({"path":null,"placeholder":"来唠两句~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1542,46 +1541,7 @@ var loadCSS = function( href, before, media, attributes ){
   });
   volantis.pjax.push(pjax_valine);
 </script>
-<script>
-  var pushLink ="https://push.xuthus.cc/send/437d290a4b978e069b1473bcb42a7c01";
-  var siteName = "handsonQ's blog";
-  var valineButton=document.getElementsByClassName("vsubmit vbtn")[0];
-  var title = siteName + "上又有新评论啦~!\n";
 
-  function send_valine() {
-    //获取元素信息
-    var pagename = document.title;
-    var pageurl = document.URL;
-    var pushtime = new Date();
-    var vnick = document.getElementsByClassName("vnick vinput")[0].value;
-    var vmail = document.getElementsByClassName("vmail vinput")[0].value;
-    var vlink = document.getElementsByClassName("vlink vinput")[0].value;
-    var veditor = document.getElementsByClassName("veditor vinput")[0].value;
-    content =
-      title +
-      "昵称：" + vnick +
-      "\n邮箱：" + vmail +
-      "\n网站地址：" + vlink +
-      "\n文章标题：" + pagename +
-      "\n评论内容：" + veditor +
-      "\n文章链接：" + pageurl +
-      "\n评论时间" + pushtime.toLocaleString() + "\n";
-    var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
-    httpRequest.open("POST", pushLink, true); //第二步：打开连接
-    httpRequest.setRequestHeader(
-      "Content-type",
-      "application/json"
-    ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-    httpRequest.send(content); //发送请求 
-  }
-
-  document.body.addEventListener('click', function(e) {
-  if(e.target.className.indexOf('vsubmit') === -1) {
-    return;
-  }
-  send_valine();
-})
-</script>
 
 
 
@@ -2099,3 +2059,4 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     </div>
   </body>
 </html>
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>

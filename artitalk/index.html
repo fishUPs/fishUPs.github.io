@@ -102,7 +102,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>
     
 
 <header id="l_header" class="l_header auto shadow floatable show" style='opacity: 0' >
@@ -378,7 +377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">HandsonQ</p>
     
     
-      <p class="subtitle">「life is like a box of chocolates,you never know what you're gonna get」</p>
+      <p class="subtitle">「life is like a box of chocolates<br>you never know what you're gonna get」</p>
     
   </div>
   <div class='bottom'>
@@ -1288,14 +1287,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "来唠两句~";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+    valine.init(Object.assign({"path":null,"placeholder":"来唠两句~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1308,46 +1307,7 @@ var loadCSS = function( href, before, media, attributes ){
   });
   volantis.pjax.push(pjax_valine);
 </script>
-<script>
-  var pushLink ="https://push.xuthus.cc/send/437d290a4b978e069b1473bcb42a7c01";
-  var siteName = "handsonQ's blog";
-  var valineButton=document.getElementsByClassName("vsubmit vbtn")[0];
-  var title = siteName + "上又有新评论啦~!\n";
 
-  function send_valine() {
-    //获取元素信息
-    var pagename = document.title;
-    var pageurl = document.URL;
-    var pushtime = new Date();
-    var vnick = document.getElementsByClassName("vnick vinput")[0].value;
-    var vmail = document.getElementsByClassName("vmail vinput")[0].value;
-    var vlink = document.getElementsByClassName("vlink vinput")[0].value;
-    var veditor = document.getElementsByClassName("veditor vinput")[0].value;
-    content =
-      title +
-      "昵称：" + vnick +
-      "\n邮箱：" + vmail +
-      "\n网站地址：" + vlink +
-      "\n文章标题：" + pagename +
-      "\n评论内容：" + veditor +
-      "\n文章链接：" + pageurl +
-      "\n评论时间" + pushtime.toLocaleString() + "\n";
-    var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
-    httpRequest.open("POST", pushLink, true); //第二步：打开连接
-    httpRequest.setRequestHeader(
-      "Content-type",
-      "application/json"
-    ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-    httpRequest.send(content); //发送请求 
-  }
-
-  document.body.addEventListener('click', function(e) {
-  if(e.target.className.indexOf('vsubmit') === -1) {
-    return;
-  }
-  send_valine();
-})
-</script>
 
 
 
@@ -1865,3 +1825,4 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     </div>
   </body>
 </html>
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>

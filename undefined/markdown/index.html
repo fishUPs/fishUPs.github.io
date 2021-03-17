@@ -106,7 +106,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>
     
 
 <header id="l_header" class="l_header auto shadow floatable show" style='opacity: 0' >
@@ -382,7 +381,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">HandsonQ</p>
     
     
-      <p class="subtitle">「life is like a box of chocolates,you never know what you're gonna get」</p>
+      <p class="subtitle">「life is like a box of chocolates<br>you never know what you're gonna get」</p>
     
   </div>
   <div class='bottom'>
@@ -488,7 +487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="markdown" data-path="/markdown/">
+      <div id="lc-pv" data-title="markdown" data-path="/undefined/markdown/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -647,6 +646,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>你也可以用 <strong>```</strong> 包裹一段代码，并指定一种语言（也可以不指定)<em><strong>推荐这种</strong></em></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
 
+<h3 id="代码高亮与注释"><a href="#代码高亮与注释" class="headerlink" title="代码高亮与注释"></a>代码高亮与注释</h3><p>markdown自带代码头部注释和高亮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;c xxx&#x2F;xxx</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;* 我的第一个 C 程序 *&#x2F;</span><br><span class="line">    printf(“Hello, World! \n”);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><figcaption><span>xxx/xxx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* 我的第一个 C 程序 */</span></span><br><span class="line">    <span class="built_in">printf</span>(“Hello, World! \n”);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方便max！！！注释表明代码添加位置等非常方便</p>
 <h2 id="Markdown-链接"><a href="#Markdown-链接" class="headerlink" title="Markdown 链接"></a>Markdown 链接</h2><h3 id="自动网址链接"><a href="#自动网址链接" class="headerlink" title="自动网址链接"></a>自动网址链接</h3><p>许多Markdown处理器会自动将URL转换为链接。这意味着如果您输入<a target="_blank" rel="noopener" href="http://www.example.com,即使您没有使用方括号,您的markdown处理器也会自动将其转换为链接./">http://www.example.com，即使您没有使用方括号，您的Markdown处理器也会自动将其转换为链接。</a></p>
 <h3 id="Markdown-链接-1"><a href="#Markdown-链接-1" class="headerlink" title="Markdown 链接"></a>Markdown 链接</h3><p>链接使用方法如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
@@ -808,7 +815,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://fishups.github.io/markdown/>https://fishups.github.io/markdown/</a></p>
+                <p>本文永久链接是：<a href=https://fishups.github.io/undefined/markdown/>https://fishups.github.io/undefined/markdown/</a></p>
               
             
           </blockquote>
@@ -825,7 +832,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-17T16:07:53+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-17T23:00:18+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 17, 2021</p>
@@ -850,7 +857,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fishups.github.io/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fishups.github.io/undefined/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
           
           >
           
@@ -862,7 +869,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://fishups.github.io/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://fishups.github.io/undefined/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
           
           >
           
@@ -874,7 +881,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://fishups.github.io/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://fishups.github.io/undefined/markdown/&title=markdown - HandsonQ's blog&summary=本主题从2级标题开始，这样目录才能正常工作，不知道为什么"
           
           >
           
@@ -904,7 +911,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/abouthexo/'>
+        <a class='prev' href='/undefined/abouthexo/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>使用volantis主题安装hexo博客</p>
           <p class='content'>前期准备1、安装 Node.js 环境： 因为 Hexo 是基于Node.js 的博客框架，就像 Java 要依赖 JDK 环境一样。
 
@@ -912,7 +919,7 @@ node下载地址：http://nodejs.cn/do...</p>
         </a>
       
       
-        <a class='next' href='/luxiaojie/'>
+        <a class='next' href='/undefined/luxiaojie/'>
           <p class='title'>你好卢小姐<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>不知该说些啥只会哈哈哈哈哈凑字数了
 </p>
@@ -931,7 +938,14 @@ node下载地址：http://nodejs.cn/do...</p>
     <div id="valine_container" class="valine_thread">
   <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
-
+ <!-- valine 添加一言 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+     jinrishici.load(function(result) {
+     var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+     document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+      });
+ </script>
   </article>
 
 
@@ -958,7 +972,7 @@ node下载地址：http://nodejs.cn/do...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#markdown%E6%A0%87%E9%A2%98"><span class="toc-text">markdown标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%92%8C-%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7"><span class="toc-text">使用&#x3D;和-标记一级和二级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%8F%B7%E6%A0%87%E8%AE%B0"><span class="toc-text">使用# 号标记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="toc-text">Markdown 段落格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown%E6%AE%B5%E8%90%BD"><span class="toc-text">Markdown段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">分割线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-text">下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%B3%A8"><span class="toc-text">脚注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%88%97%E8%A1%A8"><span class="toc-text">Markdown 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%92%8C%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E3%80%82"><span class="toc-text">Markdown 有序列表和无序列表。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97"><span class="toc-text">列表嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%B8%85%E5%8D%95"><span class="toc-text">定义清单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%8C%BA%E5%9D%97"><span class="toc-text">Markdown 区块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="toc-text">区块中使用列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="toc-text">列表中使用区块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E4%BB%A3%E7%A0%81"><span class="toc-text">Markdown 代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E4%BB%A3%E7%A0%81-1"><span class="toc-text">Markdown 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-text">代码区块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E9%93%BE%E6%8E%A5"><span class="toc-text">Markdown 链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%BD%91%E5%9D%80%E9%93%BE%E6%8E%A5"><span class="toc-text">自动网址链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E9%93%BE%E6%8E%A5-1"><span class="toc-text">Markdown 链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5"><span class="toc-text">高级链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8URL%E9%93%BE%E6%8E%A5"><span class="toc-text">禁用自动URL链接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%9B%BE%E7%89%87"><span class="toc-text">Markdown 图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E8%A1%A8%E6%A0%BC"><span class="toc-text">Markdown 表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7"><span class="toc-text">Markdown 高级技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-HTML-%E5%85%83%E7%B4%A0"><span class="toc-text">支持的 HTML 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89"><span class="toc-text">转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-text">公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typora-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81%E6%97%B6%E5%BA%8F%E5%9B%BE-%E9%A1%BA%E5%BA%8F%E5%9B%BE-%E3%80%81%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-text">typora 画流程图、时序图(顺序图)、甘特图</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#markdown%E6%A0%87%E9%A2%98"><span class="toc-text">markdown标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%92%8C-%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7"><span class="toc-text">使用&#x3D;和-标记一级和二级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%8F%B7%E6%A0%87%E8%AE%B0"><span class="toc-text">使用# 号标记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="toc-text">Markdown 段落格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown%E6%AE%B5%E8%90%BD"><span class="toc-text">Markdown段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">分割线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-text">下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%B3%A8"><span class="toc-text">脚注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%88%97%E8%A1%A8"><span class="toc-text">Markdown 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%92%8C%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E3%80%82"><span class="toc-text">Markdown 有序列表和无序列表。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97"><span class="toc-text">列表嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%B8%85%E5%8D%95"><span class="toc-text">定义清单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%8C%BA%E5%9D%97"><span class="toc-text">Markdown 区块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="toc-text">区块中使用列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="toc-text">列表中使用区块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E4%BB%A3%E7%A0%81"><span class="toc-text">Markdown 代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E4%BB%A3%E7%A0%81-1"><span class="toc-text">Markdown 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E4%B8%8E%E6%B3%A8%E9%87%8A"><span class="toc-text">代码高亮与注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E9%93%BE%E6%8E%A5"><span class="toc-text">Markdown 链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%BD%91%E5%9D%80%E9%93%BE%E6%8E%A5"><span class="toc-text">自动网址链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E9%93%BE%E6%8E%A5-1"><span class="toc-text">Markdown 链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5"><span class="toc-text">高级链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8URL%E9%93%BE%E6%8E%A5"><span class="toc-text">禁用自动URL链接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%9B%BE%E7%89%87"><span class="toc-text">Markdown 图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E8%A1%A8%E6%A0%BC"><span class="toc-text">Markdown 表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7"><span class="toc-text">Markdown 高级技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-HTML-%E5%85%83%E7%B4%A0"><span class="toc-text">支持的 HTML 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89"><span class="toc-text">转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-text">公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typora-%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81%E6%97%B6%E5%BA%8F%E5%9B%BE-%E9%A1%BA%E5%BA%8F%E5%9B%BE-%E3%80%81%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-text">typora 画流程图、时序图(顺序图)、甘特图</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1723,14 +1737,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "来唠两句~";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+    valine.init(Object.assign({"path":null,"placeholder":"来唠两句~","appId":"rCLMbcq2wl2Xlj1AVkeFDYm5-MdYXbMMI","appKey":"R1gioevNUd9QQXx2M9tmRMni","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1743,46 +1757,7 @@ var loadCSS = function( href, before, media, attributes ){
   });
   volantis.pjax.push(pjax_valine);
 </script>
-<script>
-  var pushLink ="https://push.xuthus.cc/send/437d290a4b978e069b1473bcb42a7c01";
-  var siteName = "handsonQ's blog";
-  var valineButton=document.getElementsByClassName("vsubmit vbtn")[0];
-  var title = siteName + "上又有新评论啦~!\n";
 
-  function send_valine() {
-    //获取元素信息
-    var pagename = document.title;
-    var pageurl = document.URL;
-    var pushtime = new Date();
-    var vnick = document.getElementsByClassName("vnick vinput")[0].value;
-    var vmail = document.getElementsByClassName("vmail vinput")[0].value;
-    var vlink = document.getElementsByClassName("vlink vinput")[0].value;
-    var veditor = document.getElementsByClassName("veditor vinput")[0].value;
-    content =
-      title +
-      "昵称：" + vnick +
-      "\n邮箱：" + vmail +
-      "\n网站地址：" + vlink +
-      "\n文章标题：" + pagename +
-      "\n评论内容：" + veditor +
-      "\n文章链接：" + pageurl +
-      "\n评论时间" + pushtime.toLocaleString() + "\n";
-    var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
-    httpRequest.open("POST", pushLink, true); //第二步：打开连接
-    httpRequest.setRequestHeader(
-      "Content-type",
-      "application/json"
-    ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-    httpRequest.send(content); //发送请求 
-  }
-
-  document.body.addEventListener('click', function(e) {
-  if(e.target.className.indexOf('vsubmit') === -1) {
-    return;
-  }
-  send_valine();
-})
-</script>
 
 
 
@@ -2300,3 +2275,4 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     </div>
   </body>
 </html>
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>

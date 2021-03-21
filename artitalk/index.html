@@ -22,7 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>哔哔 - HandsonQ&#39;s blog</title>
+  <title>哔哔 - Q&#39;s blog</title>
   
 
   
@@ -35,7 +35,7 @@
 
   <!-- link -->
   
-    <link rel="shortcut icon" type='image/x-icon' href="/img/avatar.png">
+    <link rel="shortcut icon" type='image/x-icon' href="/img/123.png">
   
 
   <!-- import link -->
@@ -121,9 +121,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/ncchen99/web-app-assets@1.1/blog/image/png/extend-sun.png'/>
           
           
-            HandSonQ
           
         </a>
       
@@ -366,7 +366,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper artitalk search' style="display: none;">
+        <div id="full" class='cover-wrapper artitalk dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -374,44 +374,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-      <p class="title">HandsonQ</p>
+      <p class="title">Q's Blog</p>
     
     
       <p class="subtitle">「life is like a box of chocolates<br>you never know what you're gonna get」</p>
     
   </div>
   <div class='bottom'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="这是搜索框" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
     <div class='menu navigation'>
       <div class='list-h'>
         
           
-            <a target="_blank" rel="noopener" href="https://volantis.js.org/examples/"
-              
-              
-              id="https:volantisjsorgexamples">
-              <p>社区</p>
-            </a>
-          
-            <a href="/home/"
+            <a href="/"
               
               
               id="home">
-              <p>博客</p>
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>首页</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              id="categories">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>分类</p>
             </a>
           
             <a href="/archives/"
               
               
               id="archives">
-              <p>归档</p>
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4c1.svg'><p>时间轴</p>
             </a>
           
         
@@ -420,7 +412,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+          <div id="scroll-down" style="display: none;"><i class="fas fa-anchor scroll-down-effects"></i></div>
         </div>
     
   
@@ -449,8 +441,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="/img/avatar.png">
-    <p>HandsonQ</p>
+    <img no-lazy src="/img/123.png">
+    <p>Mr.Q</p>
   </a>
 </div>
 
@@ -468,6 +460,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>发布于：Mar 15, 2021</p>
   </a>
 </div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>0 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>1 min</p>
+    </a>
+  </div>
+
 
           
         
@@ -1230,6 +1240,29 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+  volantis.pjax.push(pjax_scrollrebeal)
+</script>
+
+
 
 
   <script>
@@ -1339,8 +1372,6 @@ function listenSearch(){
 }
 function setSearchService() {
 	listenSearch();
-	
-		document.addEventListener("pjax:success", listenSearch);
 	
 }
 </script>

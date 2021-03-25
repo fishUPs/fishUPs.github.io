@@ -377,9 +377,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">Q's Blog</p>
     
     
-      <p class="subtitle">「life is like a box of chocolates<br>you never know what you're gonna get」</p>
-    
-  </div>
+    <div style='text-align:center;font-weight:700'>
+      <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js"></script>
+      <strong id="typedjs1"></strong>
+      <script>
+      var typed = new Typed("#typedjs1", {
+        strings: ["I'm nobody","And you ?"],
+        startDelay: 0, //开始延迟
+        typeSpeed: 200, //打印速度
+        backSpeed: 80, //回退速度
+        loop: true, //开启循环
+        showCursor: true, //显示光标
+        shuffle: false
+       });
+      </script>
+     </div>
+    </div>
+
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
@@ -410,7 +424,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               id="wiki">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5dd.svg'><p>WIKI</p>
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5dd.svg'><p>维基</p>
             </a>
           
         
@@ -1089,7 +1103,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           id="wiki"
         >
-        <i class='fab fa-wikipedia-w fa-fw'></i> wik首页
+        <i class='fab fa-wikipedia-w fa-fw'></i> 维基首页
       </a>
     </li>
   

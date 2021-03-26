@@ -3063,7 +3063,7 @@ article#tag .all-tags ul li span:before {
   margin-bottom: 1em;
   text-align: justify;
   max-width: 100%;
-  line-height: inherit;
+  line-height: 2;
 }
 .article .subtitle h6 {
   color: rgba(68,68,68,0.9);

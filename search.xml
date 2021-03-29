@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>volantis主题博客优化及小问题记录</title>
+      <link href="posts/4bf3ff71.html"/>
+      <url>posts/4bf3ff71.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="本地搜索相关问题"><a href="#本地搜索相关问题" class="headerlink" title="本地搜索相关问题"></a>本地搜索相关问题</h2><h3 id="F12显示content-json文件405错误"><a href="#F12显示content-json文件405错误" class="headerlink" title="F12显示content.json文件405错误"></a>F12显示<code>content.json</code>文件405错误</h3><p>查阅显示为文件跨域，</p><p>解决办法：博客强制使用https协议，全站统一成https即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>写给我自己</title>
       <link href="posts/9e3c2b62.html"/>
       <url>posts/9e3c2b62.html</url>

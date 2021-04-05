@@ -4031,7 +4031,7 @@ img.lazyload:not(.placeholder).loaded {
 }
 .md >p {
   padding-top: 4px;
-  text-indent: 2em;
+  text-indent: 2.3em;
   letter-spacing: 2px;
 }
 .md h1,

@@ -515,7 +515,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>706 words</p>
+      <p>742 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -578,6 +578,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="更改整体卡片的透明度"><a href="#更改整体卡片的透明度" class="headerlink" title="更改整体卡片的透明度"></a>更改整体卡片的透明度</h2><figure class="highlight css"><figcaption><span>/node_modules/hexo-theme-volantis/source/css/_defines/effect.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blur</span></span><br><span class="line">  <span class="keyword">@supports</span> (<span class="attribute">backdrop-filter</span>: blur(<span class="number">20px</span>))</span><br><span class="line">    <span class="attribute">background</span>: alpha($color-card, .<span class="number">9</span>) !important</span><br><span class="line">    <span class="attribute">backdrop-filter</span>: saturate(<span class="number">200%</span>) blur(<span class="number">20px</span>)</span><br></pre></td></tr></table></figure>
 
 <p>更改alpha一项中的数值即可，透明度高时最好背景色系统一，不然很晃眼看不起。</p>
+<h2 id="文章字体改善"><a href="#文章字体改善" class="headerlink" title="文章字体改善"></a>文章字体改善</h2><p>首行缩进，字间距</p>
+<figure class="highlight css"><figcaption><span>hexo-theme-volantis\source\css\_layout\md.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="selector-tag">p</span></span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">4px</span></span><br><span class="line">    text-indent: <span class="number">2em</span> //缩进</span><br><span class="line">    letter-spacing: <span class="number">2px</span> //间距</span><br></pre></td></tr></table></figure>
+
 
   
   
@@ -612,10 +615,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-01T02:55:34+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-05T21:38:50+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 1, 2021</p>
+    <p>更新于：Apr 5, 2021</p>
   </a>
 </div>
 
@@ -701,7 +704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
       
         <a class='next' href='/posts/9e3c2b62.html'>
-          <p class='title'>写给我自己<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>写给自己的话<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>夜来睡不着，就想写下我一直想写下来的一些看法，给以后的自己和有缘人看。我想，如果你是聪明人，一定能懂得这篇文章里的含义。
 
 
@@ -756,7 +759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">本地搜索相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#F12%E6%98%BE%E7%A4%BAcontent-json%E6%96%87%E4%BB%B6405%E9%94%99%E8%AF%AF"><span class="toc-number">1.1.</span> <span class="toc-text">F12显示content.json文件405错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9B%AE%E5%BD%95%E7%BC%A9%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">侧边栏目录缩略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">添加打字机效果简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">添加天气功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%95%B4%E4%BD%93%E5%8D%A1%E7%89%87%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">更改整体卡片的透明度</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">本地搜索相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#F12%E6%98%BE%E7%A4%BAcontent-json%E6%96%87%E4%BB%B6405%E9%94%99%E8%AF%AF"><span class="toc-number">1.1.</span> <span class="toc-text">F12显示content.json文件405错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9B%AE%E5%BD%95%E7%BC%A9%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">侧边栏目录缩略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">添加打字机效果简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">添加天气功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%95%B4%E4%BD%93%E5%8D%A1%E7%89%87%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">更改整体卡片的透明度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%AD%97%E4%BD%93%E6%94%B9%E5%96%84"><span class="toc-number">6.</span> <span class="toc-text">文章字体改善</span></a></li></ol>
     </div>
   </section>
 

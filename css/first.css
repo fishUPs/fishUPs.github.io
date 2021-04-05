@@ -107,7 +107,7 @@ body.modal-active {
   background: rgba(33,150,243,0.2);
 }
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 h2 {
   font-size: 1.5rem;
@@ -639,7 +639,7 @@ th {
   }
 }
 .cover-wrapper .cover-body .m_search .input:hover {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.8);
 }
 .cover-wrapper .cover-body .m_search .input:focus {
   background: #fff;

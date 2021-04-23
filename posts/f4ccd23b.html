@@ -385,7 +385,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper post dock' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -393,25 +393,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-    
+
     <div style='text-align:center;font-weight:700'>
       <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js"></script>
       <strong id="typedjs1"></strong>
       <script>
       var typed = new Typed("#typedjs1", {
         strings: ["I'm nobody !","And you ?"],
-        startDelay: 0, //开始延迟
+        startDelay: 300, //开始延迟
         typeSpeed: 120, //打印速度
-        backSpeed: 80, //回退速度
+        backSpeed: 100, //回退速度
+        backDelay: 600, //回退延迟
         loop: true, //开启循环
         showCursor: true, //显示光标
         shuffle: false
        });
       </script>
-     </div>
     </div>
 
+    
+
+
+
+  </div>
   <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="这是搜索框" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
     <div class='menu navigation'>
       <div class='list-h'>
         
@@ -420,28 +433,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               id="home">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>首页</p>
+              <p>首页</p>
             </a>
           
             <a href="/categories/"
               
               
               id="categories">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>分类</p>
+              <p>分类</p>
             </a>
           
             <a href="/archives/"
               
               
               id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4c1.svg'><p>时间轴</p>
+              <p>时间轴</p>
             </a>
           
             <a href="/wiki/"
               
               
               id="wiki">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5dd.svg'><p>维基</p>
+              <p>维基</p>
             </a>
           
         
@@ -808,30 +821,6 @@ node下载地址：h...</p>
   
   <footer class="footer clearfix">
     <br><br>
-    
-      
-        <div class="aplayer-container">
-          
-
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.7'
-      loop='all'
-      order='list'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='5340587234'
-      list-folded='true'>
-    </meting-js>
-  
-
-
-        </div>
-      
     
       
         <br>
@@ -1646,6 +1635,8 @@ function listenSearch(){
 }
 function setSearchService() {
 	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
 	
 }
 </script>

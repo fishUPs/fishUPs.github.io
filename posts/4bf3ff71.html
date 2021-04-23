@@ -385,7 +385,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper post dock' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -393,25 +393,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-    
+
     <div style='text-align:center;font-weight:700'>
       <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js"></script>
       <strong id="typedjs1"></strong>
       <script>
       var typed = new Typed("#typedjs1", {
         strings: ["I'm nobody !","And you ?"],
-        startDelay: 0, //开始延迟
+        startDelay: 300, //开始延迟
         typeSpeed: 120, //打印速度
-        backSpeed: 80, //回退速度
+        backSpeed: 100, //回退速度
+        backDelay: 600, //回退延迟
         loop: true, //开启循环
         showCursor: true, //显示光标
         shuffle: false
        });
       </script>
-     </div>
     </div>
 
+    
+
+
+
+  </div>
   <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="这是搜索框" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
     <div class='menu navigation'>
       <div class='list-h'>
         
@@ -420,28 +433,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               id="home">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>首页</p>
+              <p>首页</p>
             </a>
           
             <a href="/categories/"
               
               
               id="categories">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>分类</p>
+              <p>分类</p>
             </a>
           
             <a href="/archives/"
               
               
               id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4c1.svg'><p>时间轴</p>
+              <p>时间轴</p>
             </a>
           
             <a href="/wiki/"
               
               
               id="wiki">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5dd.svg'><p>维基</p>
+              <p>维基</p>
             </a>
           
         
@@ -513,7 +526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.2k words</p>
+      <p>1.3k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -558,7 +571,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>显示效果如本博客所示，让目录更加简洁清爽!</p>
 <h2 id="添加打字机效果简介"><a href="#添加打字机效果简介" class="headerlink" title="添加打字机效果简介"></a>添加打字机效果简介</h2><p>显示效果如本博客首页所示</p>
-<figure class="highlight html"><figcaption><span>theme\layout\_cover\dock.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#x27;text-align:center;font-weight:700&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">strong</span> <span class="attr">id</span>=<span class="string">&quot;typedjs1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> typed = <span class="keyword">new</span> Typed(<span class="string">&quot;#typedjs1&quot;</span>, &#123;</span></span><br><span class="line"><span class="javascript">    strings: [<span class="string">&quot;I&#x27;m nobody !&quot;</span>,<span class="string">&quot;And you ?&quot;</span>],</span></span><br><span class="line"><span class="javascript">    startDelay: <span class="number">0</span>, <span class="comment">//开始延迟</span></span></span><br><span class="line"><span class="javascript">    typeSpeed: <span class="number">120</span>, <span class="comment">//打印速度</span></span></span><br><span class="line"><span class="javascript">    backSpeed: <span class="number">80</span>, <span class="comment">//回退速度</span></span></span><br><span class="line"><span class="javascript">    loop: <span class="literal">true</span>, <span class="comment">//开启循环</span></span></span><br><span class="line"><span class="javascript">    showCursor: <span class="literal">true</span>, <span class="comment">//显示光标</span></span></span><br><span class="line"><span class="javascript">    shuffle: <span class="literal">false</span></span></span><br><span class="line">   &#125;);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>theme\layout\_cover\dock.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#x27;text-align:center;font-weight:700&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">strong</span> <span class="attr">id</span>=<span class="string">&quot;typedjs1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> typed = <span class="keyword">new</span> Typed(<span class="string">&quot;#typedjs1&quot;</span>, &#123;</span></span><br><span class="line"><span class="javascript">    strings: [<span class="string">&quot;I&#x27;m nobody !&quot;</span>,<span class="string">&quot;And you ?&quot;</span>],</span></span><br><span class="line"><span class="javascript">    startDelay: <span class="number">0</span>, <span class="comment">//开始延迟</span></span></span><br><span class="line"><span class="javascript">    typeSpeed: <span class="number">120</span>, <span class="comment">//打印速度</span></span></span><br><span class="line"><span class="javascript">    backSpeed: <span class="number">80</span>, <span class="comment">//回退速度</span></span></span><br><span class="line"><span class="javascript">    loop: <span class="literal">true</span>, <span class="comment">//开启循环</span></span></span><br><span class="line"><span class="javascript">    showCursor: <span class="literal">true</span>, <span class="comment">//显示光标</span></span></span><br><span class="line"><span class="javascript">    shuffle: <span class="literal">false</span></span></span><br><span class="line">   &#125;);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
 
 <p>添加位置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.cover.subtitle) &#123; %&gt;</span><br><span class="line">      &lt;p class&#x3D;&quot;subtitle&quot;&gt;&lt;%- theme.cover.subtitle%&gt;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">    +++在此处加入</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
@@ -576,6 +589,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="更改整体卡片的透明度"><a href="#更改整体卡片的透明度" class="headerlink" title="更改整体卡片的透明度"></a>更改整体卡片的透明度</h2><figure class="highlight css"><figcaption><span>/node_modules/hexo-theme-volantis/source/css/_defines/effect.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blur</span></span><br><span class="line">  <span class="keyword">@supports</span> (<span class="attribute">backdrop-filter</span>: blur(<span class="number">20px</span>))</span><br><span class="line">    <span class="attribute">background</span>: alpha($color-card, .<span class="number">9</span>) !important</span><br><span class="line">    <span class="attribute">backdrop-filter</span>: saturate(<span class="number">200%</span>) blur(<span class="number">20px</span>)</span><br></pre></td></tr></table></figure>
 
 <p>更改alpha一项中的数值即可，透明度高时最好背景色系统一，不然很晃眼看不起。</p>
+<h2 id="设置导航栏透明毛玻璃效果"><a href="#设置导航栏透明毛玻璃效果" class="headerlink" title="设置导航栏透明毛玻璃效果"></a>设置导航栏透明毛玻璃效果</h2><figure class="highlight diff"><figcaption><span>volantis\source\css\_first\navbar.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.l_header</span><br><span class="line">height: $navbar-height</span><br><span class="line"><span class="addition">+ background: rgba(255, 255, 255, 0.15) !important</span></span><br><span class="line"><span class="addition">+ backdrop-filter: saturate(200%) blur(20px)</span></span><br><span class="line">box-shadow: $boxshadow-card</span><br></pre></td></tr></table></figure>
+
+<p>原理即找到<code>blur</code>属性，单独拿出来给导航栏，避免整个全局都改变。</p>
 <h2 id="文章字体改善"><a href="#文章字体改善" class="headerlink" title="文章字体改善"></a>文章字体改善</h2><p>首行缩进，字间距</p>
 <figure class="highlight css"><figcaption><span>hexo-theme-volantis\source\css\_layout\md.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="selector-tag">p</span></span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">4px</span></span><br><span class="line">    text-indent: <span class="number">2.3em</span> //缩进 多大自己慢慢调</span><br><span class="line">    letter-spacing: <span class="number">2px</span> //间距</span><br></pre></td></tr></table></figure>
 
@@ -622,10 +638,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-06T02:05:53+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-23T15:22:57+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 6, 2021</p>
+    <p>更新于：Apr 23, 2021</p>
   </a>
 </div>
 
@@ -766,7 +782,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">本地搜索相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#F12%E6%98%BE%E7%A4%BAcontent-json%E6%96%87%E4%BB%B6405%E9%94%99%E8%AF%AF"><span class="toc-number">1.1.</span> <span class="toc-text">F12显示content.json文件405错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9B%AE%E5%BD%95%E7%BC%A9%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">侧边栏目录缩略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">添加打字机效果简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">添加天气功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%95%B4%E4%BD%93%E5%8D%A1%E7%89%87%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">更改整体卡片的透明度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%AD%97%E4%BD%93%E6%94%B9%E5%96%84"><span class="toc-number">6.</span> <span class="toc-text">文章字体改善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#valine%E8%AF%84%E8%AE%BA%E6%8E%A8%E9%80%81"><span class="toc-number">7.</span> <span class="toc-text">valine评论推送</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ%E6%8E%A8%E9%80%81"><span class="toc-number">7.1.</span> <span class="toc-text">QQ推送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E5%88%A0%E9%99%A4"><span class="toc-number">7.2.</span> <span class="toc-text">评论删除</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">本地搜索相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#F12%E6%98%BE%E7%A4%BAcontent-json%E6%96%87%E4%BB%B6405%E9%94%99%E8%AF%AF"><span class="toc-number">1.1.</span> <span class="toc-text">F12显示content.json文件405错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9B%AE%E5%BD%95%E7%BC%A9%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">侧边栏目录缩略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">添加打字机效果简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">添加天气功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%95%B4%E4%BD%93%E5%8D%A1%E7%89%87%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">更改整体卡片的透明度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%A0%8F%E9%80%8F%E6%98%8E%E6%AF%9B%E7%8E%BB%E7%92%83%E6%95%88%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">设置导航栏透明毛玻璃效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%AD%97%E4%BD%93%E6%94%B9%E5%96%84"><span class="toc-number">7.</span> <span class="toc-text">文章字体改善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#valine%E8%AF%84%E8%AE%BA%E6%8E%A8%E9%80%81"><span class="toc-number">8.</span> <span class="toc-text">valine评论推送</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ%E6%8E%A8%E9%80%81"><span class="toc-number">8.1.</span> <span class="toc-text">QQ推送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E5%88%A0%E9%99%A4"><span class="toc-number">8.2.</span> <span class="toc-text">评论删除</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -810,30 +826,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <footer class="footer clearfix">
     <br><br>
-    
-      
-        <div class="aplayer-container">
-          
-
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.7'
-      loop='all'
-      order='list'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='5340587234'
-      list-folded='true'>
-    </meting-js>
-  
-
-
-        </div>
-      
     
       
         <br>
@@ -1648,6 +1640,8 @@ function listenSearch(){
 }
 function setSearchService() {
 	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
 	
 }
 </script>

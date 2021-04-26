@@ -4666,6 +4666,27 @@ img.lazyload:not(.placeholder).loaded {
 .widget.text .content a:active {
   color: #d93400;
 }
+.widget.gonggao .content {
+  padding: 4px 16px;
+}
+.widget.gonggao .content,
+.widget.gonggao .content p {
+  font-size: 0.875rem;
+  word-break: break-all;
+}
+.widget.gonggao .content a {
+  color: #2196f3;
+  transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+}
+.widget.gonggao .content a:hover {
+  color: #ff5722;
+}
+.widget.gonggao .content a:active {
+  color: #d93400;
+}
 .widget.list .content {
   padding: 8px 0;
 }

@@ -22,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有分类 - Q&#39;s blog</title>
+  <title>矩阵可逆的几个充要条件 - Q&#39;s blog</title>
+  
+    <meta name="keywords" content="线性代数">
   
 
+  
+    <meta name="description" content="关于矩阵可逆的几个判断和充要条件">
   
 
   <!-- feed -->
@@ -448,7 +452,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper category search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -536,66 +540,344 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      <div class='post-wrapper'>
-        <article id="cat" class="post article white-box reveal shadow blur">
-          <h2>所有分类</h2>
-          <div class="all-cats">
-            
-              
-                <a class="" href="/categories/hexo/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;hexo</span>
-                  <span class="title">
-                    (2)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/markdown/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;markdown</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E5%BF%83%E4%BA%8B/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;心事</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;知识库</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E8%80%83%E7%A0%94/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;考研</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;胡思乱想</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-            
-          </div>
-          <br>
+    
+    
+      <h1 class="title">
+        矩阵可逆的几个充要条件
+      </h1>
+      <div class='new-meta-box'>
+        
           
-        </article>
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/img/123.png">
+    <p>Mr.Q</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%80%83%E7%A0%94/">考研</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 27, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>331 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>1 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="矩阵可逆的几个充要条件" data-path="/posts/8c1129b8.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
       </div>
     
+  </div>
+
+
   
+  
+  <p>关于矩阵可逆的几个判断和充要条件</p>
+<span id="more"></span>
+<h2 id="矩阵可逆的定义"><a href="#矩阵可逆的定义" class="headerlink" title="矩阵可逆的定义"></a>矩阵可逆的定义</h2><blockquote>
+<p><strong>矩阵可逆</strong>:<br><strong>概念</strong>：对于n阶矩阵A，如果有一个n阶矩阵B，使<br><strong>AB=BA=E</strong><br>则说矩阵A是<strong>可逆</strong>的，并把矩阵B称为A的<strong>逆矩阵。</strong></p>
+</blockquote>
+<h2 id="A矩阵行列式不等于0"><a href="#A矩阵行列式不等于0" class="headerlink" title="A矩阵行列式不等于0"></a><strong>A矩阵行列式不等于0</strong></h2><p>$$<br>\left | A\right |\neq 0<br>$$</p>
+<blockquote>
+<p>需要回忆一下<strong>伴随矩阵</strong>的概念，<strong>行列式的运算规律</strong>。</p>
+</blockquote>
+<p><strong>充分性</strong>：先证<img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7BAA%5E%5Cast+=+A%5E%5Cast+A+=+%7CA%7CE%7D" class="lazyload" data-srcset="https://www.zhihu.com/equation?tex=%5Cmathbf%7BAA%5E%5Cast+=+A%5E%5Cast+A+=+%7CA%7CE%7D" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="[公式]">。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-35db4bfa310e893e061e5a86bb3d6c4f_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-35db4bfa310e893e061e5a86bb3d6c4f_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<p>再证充分性，<img src="https://pic4.zhimg.com/80/v2-2d8fc0f9a7865bc6f4b9f411533d3ddf_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-2d8fc0f9a7865bc6f4b9f411533d3ddf_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<p><strong>必要性</strong>：<img src="https://pic1.zhimg.com/80/v2-d13a85144575c304da13a9d58638a1a0_720w.png" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-d13a85144575c304da13a9d58638a1a0_720w.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<h2 id="A可表示为有限个初等矩阵相乘"><a href="#A可表示为有限个初等矩阵相乘" class="headerlink" title="A可表示为有限个初等矩阵相乘"></a><strong>A可表示为有限个初等矩阵相乘</strong></h2><blockquote>
+<p>需要回忆一下<strong>初等矩阵</strong>的概念，<strong>矩阵的初等变换</strong>。</p>
+</blockquote>
+<p><strong>充分性</strong>：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-d746a5a5a347b7e6c991144056deb8dd_720w.png" class="lazyload" data-srcset="https://pic2.zhimg.com/80/v2-d746a5a5a347b7e6c991144056deb8dd_720w.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<p><strong>必要性</strong>：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-3585f6b8a8aaacd7efb6a199701b7197_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-3585f6b8a8aaacd7efb6a199701b7197_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<h2 id="A（行-等价于n阶单位矩阵"><a href="#A（行-等价于n阶单位矩阵" class="headerlink" title="A（行)等价于n阶单位矩阵"></a><strong>A（行)等价于n阶单位矩阵</strong></h2><p><img src="https://pic4.zhimg.com/80/v2-7437626ffafe6c947f5c138132d22d2f_720w.png" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-7437626ffafe6c947f5c138132d22d2f_720w.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<h2 id="R-A-n"><a href="#R-A-n" class="headerlink" title="R(A)=n"></a><strong>R(A)=n</strong></h2><blockquote>
+<p>需要回忆一下<strong>矩阵的秩</strong>的概念。</p>
+</blockquote>
+<p><img src="https://www.zhihu.com/equation?tex=R(%5Cmathbf+A)=n+%5Ciff+%7C%5Cmathbf+A%7C+%5Cneq+0+%5Ciff+%E7%9F%A9%E9%98%B5%E5%8F%AF%E9%80%86" class="lazyload" data-srcset="https://www.zhihu.com/equation?tex=R(%5Cmathbf+A)=n+%5Ciff+%7C%5Cmathbf+A%7C+%5Cneq+0+%5Ciff+%E7%9F%A9%E9%98%B5%E5%8F%AF%E9%80%86" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="[公式]"></p>
+<h2 id="A的列（行-向量组线性无关"><a href="#A的列（行-向量组线性无关" class="headerlink" title="A的列（行)向量组线性无关"></a><strong>A的列（行)向量组线性无关</strong></h2><blockquote>
+<p>需要回忆一下<strong>齐次线性方程组</strong>，<strong>矩阵的列向量组</strong>等。</p>
+</blockquote>
+<p>以列向量组为例说明：</p>
+<p><img src="https://bu.dusays.com/2021/07/27/7375ff653d697.png" class="lazyload" data-srcset="https://bu.dusays.com/2021/07/27/7375ff653d697.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210727155649833.png"></p>
+<h2 id="齐次线性方程组-Ax-0-仅有零解"><a href="#齐次线性方程组-Ax-0-仅有零解" class="headerlink" title="齐次线性方程组 Ax=0 仅有零解"></a><strong>齐次线性方程组 <em>Ax=0</em> 仅有零解</strong></h2><blockquote>
+<p>第5条中已说明。</p>
+</blockquote>
+<h2 id="非齐次线性方程组-Ax-B-有唯一解"><a href="#非齐次线性方程组-Ax-B-有唯一解" class="headerlink" title="非齐次线性方程组 Ax=B 有唯一解"></a><strong>非齐次线性方程组 <em>Ax=B</em> 有唯一解</strong></h2><blockquote>
+<p>没啥好证的。</p>
+</blockquote>
+<h2 id="任一-n-维向量可由A的列（行-向量组线性表示"><a href="#任一-n-维向量可由A的列（行-向量组线性表示" class="headerlink" title="任一 n 维向量可由A的列（行)向量组线性表示"></a><strong>任一 <em>n</em> 维向量可由A的列（行)向量组线性表示</strong></h2><blockquote>
+<p>需要回忆一下<strong>向量空间</strong>的内容。</p>
+</blockquote>
+<p>以列向量组为例说明：</p>
+<p><img src="https://bu.dusays.com/2021/07/27/a74c0e712c88b.png" class="lazyload" data-srcset="https://bu.dusays.com/2021/07/27/a74c0e712c88b.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="1627372983066.png"></p>
+<h2 id="A的特征值都不为0"><a href="#A的特征值都不为0" class="headerlink" title="A的特征值都不为0"></a><strong>A的特征值都不为0</strong></h2><blockquote>
+<p>记忆一下特征值的乘积为矩阵行列式（这个不证）。</p>
+</blockquote>
+<p><img src="https://bu.dusays.com/2021/07/27/d0c8f2643fa93.png" class="lazyload" data-srcset="https://bu.dusays.com/2021/07/27/d0c8f2643fa93.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="1627373015058.png"></p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://handsonq.gitee.io/posts/8c1129b8.html>https://handsonq.gitee.io/posts/8c1129b8.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-27T16:08:04+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 27, 2021</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>线性代数</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://handsonq.gitee.io/posts/8c1129b8.html&title=矩阵可逆的几个充要条件 - Q's blog&summary=关于矩阵可逆的几个判断和充要条件"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://handsonq.gitee.io/posts/8c1129b8.html&title=矩阵可逆的几个充要条件 - Q's blog&summary=关于矩阵可逆的几个判断和充要条件"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://handsonq.gitee.io/posts/8c1129b8.html&title=矩阵可逆的几个充要条件 - Q's blog&summary=关于矩阵可逆的几个判断和充要条件"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/81bb41d3.html'>
+          <p class='title'>我喜欢的原来不是你，而是遇到你的那个时间<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>初中的同桌，是初一还是初二来着，真的很早了,当时还坐在右边中间靠窗位置，也许正是这样，我才只会记得美好的部分吧。
+
+
+今天突发奇想，初中认识一个和我一个姓的同桌，女生，非常乐观，每天开开心心，作...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+ <!-- valine 添加一言 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+     jinrishici.load(function(result) {
+     var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+     document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+      });
+ </script>
+
+  </article>
+
+
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -604,6 +886,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
+
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%8F%AF%E9%80%86%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">矩阵可逆的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E4%B8%8D%E7%AD%89%E4%BA%8E0"><span class="toc-number">2.</span> <span class="toc-text">A矩阵行列式不等于0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E5%8F%AF%E8%A1%A8%E7%A4%BA%E4%B8%BA%E6%9C%89%E9%99%90%E4%B8%AA%E5%88%9D%E7%AD%89%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">3.</span> <span class="toc-text">A可表示为有限个初等矩阵相乘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A%EF%BC%88%E8%A1%8C-%E7%AD%89%E4%BB%B7%E4%BA%8En%E9%98%B6%E5%8D%95%E4%BD%8D%E7%9F%A9%E9%98%B5"><span class="toc-number">4.</span> <span class="toc-text">A（行)等价于n阶单位矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#R-A-n"><span class="toc-number">5.</span> <span class="toc-text">R(A)&#x3D;n</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E7%9A%84%E5%88%97%EF%BC%88%E8%A1%8C-%E5%90%91%E9%87%8F%E7%BB%84%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3"><span class="toc-number">6.</span> <span class="toc-text">A的列（行)向量组线性无关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84-Ax-0-%E4%BB%85%E6%9C%89%E9%9B%B6%E8%A7%A3"><span class="toc-number">7.</span> <span class="toc-text">齐次线性方程组 Ax&#x3D;0 仅有零解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84-Ax-B-%E6%9C%89%E5%94%AF%E4%B8%80%E8%A7%A3"><span class="toc-number">8.</span> <span class="toc-text">非齐次线性方程组 Ax&#x3D;B 有唯一解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E4%B8%80-n-%E7%BB%B4%E5%90%91%E9%87%8F%E5%8F%AF%E7%94%B1A%E7%9A%84%E5%88%97%EF%BC%88%E8%A1%8C-%E5%90%91%E9%87%8F%E7%BB%84%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">任一 n 维向量可由A的列（行)向量组线性表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC%E9%83%BD%E4%B8%8D%E4%B8%BA0"><span class="toc-number">10.</span> <span class="toc-text">A的特征值都不为0</span></a></li></ol>
+    </div>
+  </section>
 
 
   
@@ -614,14 +910,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
 		  
 		  <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="矩阵可逆的几个充要条件";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

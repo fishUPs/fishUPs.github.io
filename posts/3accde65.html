@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: 胡思乱想 - Q&#39;s blog</title>
+  <title>重装系统后重新配置博客 - Q&#39;s blog</title>
+  
+    <meta name="keywords" content="博客优化">
   
 
+  
+    <meta name="description" content="以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件backup,切记设为不公开。">
   
 
   <!-- feed -->
@@ -450,7 +452,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -538,79 +540,282 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        重装系统后重新配置博客
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/img/123.png">
+    <p>Mr.Q</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/532d18b3.html">
-        写博客的意义探讨
-      </a>
-    </h2>
-    
-  
-  <div class='md'>
-    
-      <p>算起来已经连续捣鼓个人博客1个月整了，因为不懂得太多而且想改的地方也太多，导致这一个月都作息不规律，现在回想起来，我做这个博客的意义是什么的，他能支撑我继续捣鼓完善这个博客吗</p>
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/hexo/">hexo</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-04-02</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 28, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>584 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="重装系统后重新配置博客" data-path="/posts/3accde65.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件<em>backup</em>,切记设为不公开。</p>
+<span id="more"></span>
+
+<p>因为重装系统后，Hexo 相关依赖插件/软件和在C盘的缓存资料都会被删除，以至于Hexo的相关命令都无法运行。所有，在重装系统后，都要重新部署Hexo。但是重新部署并不难，只需要几个步骤就行。<br> 因为我的hexo blog文件夹不存储于C盘，并没有因为重装系统被删掉。所有重新部署很容易。</p>
+<h2 id="安装-git-和-node"><a href="#安装-git-和-node" class="headerlink" title="安装 git 和 node"></a>安装 git 和 node</h2><p>git for windows: [<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a><br>Node.js: [<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+<h2 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h2><p>配置git个人信息和生成ssh密钥<br>打开git bash，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxx&quot;</span><br><span class="line">git config --global user.email &quot;xxxxxx@xx.com&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxxx@xx.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>把上面的xxxx换成自己的资料，然后一直Enter就行</p>
+<h2 id="设置Github的ssh密钥"><a href="#设置Github的ssh密钥" class="headerlink" title="设置Github的ssh密钥"></a>设置Github的ssh密钥</h2><p>当上面的运行完成后，会在 <code>C:\Users\user\.ssh</code>里出现<code>.ssh</code>文件夹，里面有id_rsa和id_rsa.pub两个文件，复制id_rsa.pub的内容(用记事本或者任意文本编辑器打开都可）。</p>
+<p>打开 Github 网页，依次是 <code>右上角Settings - SSH and GPG keys - New SSH key</code> 把复制的内容粘贴到 <code>Key</code>栏，然后保存。保存了新的密匙，原来的可以删除。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>在gitbush测试是否成功</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>git bash 上 输入 <code>npm install hexo-cli -g</code></p>
+<p><code>hexo -v</code>测试是否安装成功</p>
+<div class='checkbox red'><input type="radio" />
+            <p>注：若出现<code>hexo</code>找不到命令</p>
+            </div>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash: hexo command not found</span><br></pre></td></tr></table></figure>
+
+<p>是环境变量的node定位错误，改一下，在githush打开的盘找到hexo环境文件，添加到环境变量</p>
+<p><img src="https://bu.dusays.com/2021/07/28/d12f42fd99400.PNG" class="lazyload" data-srcset="https://bu.dusays.com/2021/07/28/d12f42fd99400.PNG" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="捕获.PNG"></p>
+<h2 id="替换新生成的hexo文件内容"><a href="#替换新生成的hexo文件内容" class="headerlink" title="替换新生成的hexo文件内容"></a>替换新生成的hexo文件内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hexo #&#39;hexo&#39;随便取是自己放博客文件夹名字</span><br></pre></td></tr></table></figure>
+
+<p>生成hexo文件夹，将原hexo文件夹内容全选<strong>复制</strong>，<span class='p red'>切记是复制别直接拖过去，防止出问题源文件也丢失了！</span></p>
+<p>在新生成hexo内粘贴替换，完工</p>
+<p>本地生成一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>三连部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <!-- <a class='readmore' href='/posts/532d18b3.html'>
-            Read More
-          </a> -->
-          <a class="link-fx-1 color-contrast-higher" href="/posts/532d18b3.html">
-            <span>Read More</span>
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"/><line x1="10" y1="18" x2="16" y2="12"/><line x1="16" y1="12" x2="22" y2="18" /></g></svg>
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://handsonq.gitee.io/posts/3accde65.html>https://handsonq.gitee.io/posts/3accde65.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-28T16:50:50+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 28, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>博客优化</p></a></div>
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://handsonq.gitee.io/posts/3accde65.html&title=重装系统后重新配置博客 - Q's blog&summary=以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件backup,切记设为不公开。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://handsonq.gitee.io/posts/3accde65.html&title=重装系统后重新配置博客 - Q's blog&summary=以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件backup,切记设为不公开。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://handsonq.gitee.io/posts/3accde65.html&title=重装系统后重新配置博客 - Q's blog&summary=以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件backup,切记设为不公开。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/8c1129b8.html'>
+          <p class='title'>矩阵可逆的几个充要条件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>关于矩阵可逆的几个判断和充要条件
+
+矩阵可逆的定义
+矩阵可逆:概念：对于n阶矩阵A，如果有一个n阶矩阵B，使AB=BA=E则说矩阵A是可逆的，并把矩阵B称为A的逆矩阵。
+
+A矩阵行列式不等于0$...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+ <!-- valine 添加一言 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+     jinrishici.load(function(result) {
+     var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+     document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+      });
+ </script>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -618,312 +823,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget gonggao shadow blur desktop">
-  
-  <header>
-    
-      <i class="fas fa-heartbeat fa-fw" aria-hidden="true"></i><span class='name'>For You</span>
-    
-  </header>
 
 
-  <div class='gonggao'>
-    <div style="text-align:center;font-weight:700">
-    <span id="gonggao"></span>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-    <script>
-     var typed = new Typed("#gonggao",{
-        strings:['I forgot everything', 'about you', 'But I know,', 'I like you.', '', ''],
-        startDelay: 300, //开始延迟
-        typeSpeed: 120, //打印速度
-        backSpeed: 100, //回退速度
-        backDelay: 600, //回退延迟
-        loop: true, //开启循环
-        showCursor: true, //显示光标
-        shuffle: false
-      });
-    </script>
-    </div>
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://gitee.com/handsonq/img/raw/master/longmao.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Q's blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=nvb-8Prt8fDv3vjx5vP-9-Kw-fHz&#34; style="
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/fishUPs"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1689036152"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/hexo/" href="/categories/hexo/"
-            id="categorieshexo"
-            ><div class='name'>hexo</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/markdown/" href="/categories/markdown/"
-            id="categoriesmarkdown"
-            ><div class='name'>markdown</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BF%83%E4%BA%8B/" href="/categories/%E5%BF%83%E4%BA%8B/"
-            id="categoriesE5BF83E4BA8B"
-            ><div class='name'>心事</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"
-            id="categoriesE79FA5E8AF86E5BA93"
-            ><div class='name'>知识库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%80%83%E7%A0%94/" href="/categories/%E8%80%83%E7%A0%94/"
-            id="categoriesE88083E7A094"
-            ><div class='name'>考研</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/" href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"
-            id="categoriesE883A1E6809DE4B9B1E683B3"
-            ><div class='name'>胡思乱想</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-git-%E5%92%8C-node"><span class="toc-number">1.</span> <span class="toc-text">安装 git 和 node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="toc-number">2.</span> <span class="toc-text">生成ssh密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEGithub%E7%9A%84ssh%E5%AF%86%E9%92%A5"><span class="toc-number">3.</span> <span class="toc-text">设置Github的ssh密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">4.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E6%96%B0%E7%94%9F%E6%88%90%E7%9A%84hexo%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-number">5.</span> <span class="toc-text">替换新生成的hexo文件内容</span></a></li></ol>
     </div>
   </section>
 
 
   
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" style="font-size: 24px; color: #555">博客优化</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/" style="font-size: 14px; color: #999">知识库</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 14px; color: #999">笔记</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">线性代数</a> <a href="/tags/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/" style="font-size: 14px; color: #999">胡思乱想</a> <a href="/tags/%E8%BF%87%E5%8E%BB%E6%97%B6/" style="font-size: 14px; color: #999">过去时</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow blur desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>9 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2021/03/01'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>已水字数：</div>
-          <div>16.4k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>总访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Wed Jul 28 2021 16:50:56 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-07-28 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-07-28 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -932,8 +855,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="重装系统后重新配置博客";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>重装系统后重新配置博客</title>
+      <link href="posts/3accde65.html"/>
+      <url>posts/3accde65.html</url>
+      
+        <content type="html"><![CDATA[<p>以下方法只适用于没有删除hexo blog文件夹,不足之处是博客数据任然依赖本地储存，本地一旦数据出现丢失，基本上就完蛋了。后续改进将博客源文件配合自动化备份上传到github博客库的分支下，hexo有自动化插件<em>backup</em>,切记设为不公开。</p><span id="more"></span><p>因为重装系统后，Hexo 相关依赖插件/软件和在C盘的缓存资料都会被删除，以至于Hexo的相关命令都无法运行。所有，在重装系统后，都要重新部署Hexo。但是重新部署并不难，只需要几个步骤就行。<br> 因为我的hexo blog文件夹不存储于C盘，并没有因为重装系统被删掉。所有重新部署很容易。</p><h2 id="安装-git-和-node"><a href="#安装-git-和-node" class="headerlink" title="安装 git 和 node"></a>安装 git 和 node</h2><p>git for windows: [<a href="https://git-scm.com/">https://git-scm.com/</a><br>Node.js: [<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p><h2 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h2><p>配置git个人信息和生成ssh密钥<br>打开git bash，输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxx&quot;</span><br><span class="line">git config --global user.email &quot;xxxxxx@xx.com&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxxx@xx.com&quot;</span><br></pre></td></tr></table></figure><p>把上面的xxxx换成自己的资料，然后一直Enter就行</p><h2 id="设置Github的ssh密钥"><a href="#设置Github的ssh密钥" class="headerlink" title="设置Github的ssh密钥"></a>设置Github的ssh密钥</h2><p>当上面的运行完成后，会在 <code>C:\Users\user\.ssh</code>里出现<code>.ssh</code>文件夹，里面有id_rsa和id_rsa.pub两个文件，复制id_rsa.pub的内容(用记事本或者任意文本编辑器打开都可）。</p><p>打开 Github 网页，依次是 <code>右上角Settings - SSH and GPG keys - New SSH key</code> 把复制的内容粘贴到 <code>Key</code>栏，然后保存。保存了新的密匙，原来的可以删除。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>在gitbush测试是否成功</p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>git bash 上 输入 <code>npm install hexo-cli -g</code></p><p><code>hexo -v</code>测试是否安装成功</p><div class='checkbox red'><input type="radio" />            <p>注：若出现<code>hexo</code>找不到命令</p>            </div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash: hexo command not found</span><br></pre></td></tr></table></figure><p>是环境变量的node定位错误，改一下，在githush打开的盘找到hexo环境文件，添加到环境变量</p><p><img src="https://bu.dusays.com/2021/07/28/d12f42fd99400.PNG" class="lazyload" data-srcset="https://bu.dusays.com/2021/07/28/d12f42fd99400.PNG" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="捕获.PNG"></p><h2 id="替换新生成的hexo文件内容"><a href="#替换新生成的hexo文件内容" class="headerlink" title="替换新生成的hexo文件内容"></a>替换新生成的hexo文件内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hexo #&#39;hexo&#39;随便取是自己放博客文件夹名字</span><br></pre></td></tr></table></figure><p>生成hexo文件夹，将原hexo文件夹内容全选<strong>复制</strong>，<span class='p red'>切记是复制别直接拖过去，防止出问题源文件也丢失了！</span></p><p>在新生成hexo内粘贴替换，完工</p><p>本地生成一下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>三连部署</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>矩阵可逆的几个充要条件</title>
       <link href="posts/8c1129b8.html"/>
       <url>posts/8c1129b8.html</url>
